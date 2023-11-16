@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Courses</title>
+    <link rel="stylesheet" type="text/css" href="./websiteResources/styles.css">
+    <style>
+        .flex-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            height: auto;
+        }
+
+        /* Styling for the content area */
+        .news-content {
+            flex: 1;
+            max-width: 50%; /* Limiting to 50% of the container width */
+            margin-top: 13vh;
+            padding: 10px;
+        }
+
+        /* Styles for headings and paragraphs inside .news-content */
+        .news-content h1, .news-content h2, .news-content h3 {
+            color: #000000;
+            font-family: 'Trebuchet MS', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .news-content h1 { font-size: 35px; }
+        .news-content h2 { font-size: 30px; }
+        .news-content h3 { font-size: 25px; font-weight: bold; }
+
+        .news-content p {
+            font-family: 'Arial', sans-serif;
+            color: #444444;
+            line-height: 1.5;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .news-content ol { margin-left: 40px; }
+
+        /* Responsive design for mobile devices */
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .news-content, .image-area {
+                max-width: 100%;
+            }
+
+            .news-content {
+                margin-top: 0; /* Adjust as needed */
+            }
+        }
+    </style>
+  </head>
+ 
+  <body>
+    <header class="navbar_top" role="banner">
+        <nav class="top_nav_bar" role="navigation" aria-label="Main navigation">
+          <ul>
+            <li>
+              <a href="index.html" class="skip-link" role="menuitem">Home</a>
+            </li>
+            <li>
+              <a href="courses.html" role="menuitem" class="underline-hover">Courses</a>
+            </li>
+            <li>
+              <a href="tutorials.html" role="menuitem" class="underline-hover">Tutorials</a>
+            </li>
+            <li>
+              <a href="student_resources.html" role="menuitem" class="underline-hover">Resources</a>
+            </li>
+            <li>
+              <a href="contact.html" role="menuitem" class="underline-hover">Contact</a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+        <div class="flex-container">
+            <div class="image-area">
+                <img src="cs.jpg" alt="teaching" width="900px" height="600px">
+                <!-- The image will be set via CSS -->
+            </div>
+                
+                <div class="news-content">
+                    <h1 style="text-align: center;">School of Computer Science</h1>
+                    <h3 style="text-align: center;">Latest News</h3>
+                    <h2>Technical Workshop Series: Advanced SQL Server Techniques</h2>
+                    <p>Presenter: Atefeh Gilvari</p>
+                    <p>Date: Thursday, November 16th, 3:00pm -4:00 pm</p>
+                    <p>Location: 4th Floor (Workshop space) at 300 Ouellette Avenue (School of Computer Science Advanced Computing Hub)</p>
+                    <p>LATECOMERS WILL NOT BE ADMITTED once the presentation has begun.</p>
+                    <h3>Abstract:</h3>
+                    <p>This workshop explores Advanced SQL Server techniques within real-world analytics scenarios...</p>
+                    <h3>Workshop Outline:</h3>
+                    <ol>
+                        <li>Introduction to SQL SERVER</li>
+                        <li>Advanced Analysis with Window Functions</li>
+                        <li>Subqueries</li>
+                        <li>Common Table Expressions (CTEs)</li>
+                    </ol>
+                    <h3>Prerequisites:</h3>
+                    <p>Knowledge of SQL Fundamentals</p>
+                    <h3>Biography:</h3>
+                    <p>Atefeh is a second-year Ph.D. student specializing in deep learning-based anomaly detection...</p>
+                </div>
+        </div>
+        
+  </body>
+
+</html>
