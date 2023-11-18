@@ -22,7 +22,7 @@ h2{
 /*set the proper style for text in paragraph*/
 p {
     font-weight: 450;
-    font-family: Haettenschweiler, sans-serif;
+    font-family:Trebuchet MS, sans-serif;
     color: rgba(24, 24, 24, 0.87);
     margin:0 50px 0 50px;
     padding-top: 10px;
@@ -245,6 +245,46 @@ p {
 
 
 
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+    .top_nav_bar ul {
+        flex-direction: column; /* Stack the items vertically */
+        height: auto;          /* Adjust height to fit content */
+        padding: 0;
+    }
+
+    .top_nav_bar li {
+        width: 100%;           /* Each item spans the full width */
+        text-align: center;    /* Center the text */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional: Add a bottom border to each item */
+    }
+
+    .top_nav_bar li:last-child {
+        border-bottom: none;  /* Remove border from the last item */
+    }
+
+    .skip-link, .underline-hover {
+        display: block;        /* Make each link a block element */
+        padding: 10px 0;       /* Add padding for touch targets */
+        font-size: 18px;       /* Adjust font size for smaller screens */
+    }
+
+    .underline-hover::before {
+        height: 1px;           /* Adjust the underline thickness */
+    }
+}
+
+/* Optionally, you can add styles for even smaller screens */
+@media screen and (max-width: 480px) {
+    .top_nav_bar ul {
+        padding: 0;
+    }
+
+    .skip-link, .underline-hover {
+        font-size: 16px;       /* Smaller font size for very small screens */
+        padding: 8px 0;        /* Adjust padding */
+    }
+}
 
 /*animations
 fade-in: text fade in 
