@@ -4,7 +4,99 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Courses</title>
-    <link rel="stylesheet" type="text/css" href="./websiteResources/styles.css">
+    <link rel="stylesheet" type="text/css" href="./websiteResources/style.css">
+    <style>
+      /* Table styles */
+/* Table styles */
+table {
+  width: calc(100% - 4vw); /* Adjusting the width to account for the margins */
+    border-collapse: collapse;
+    margin-left: 2vw;  /* 2% of the viewport width margin on the left */
+    margin-right: 2vw; /* 2% of the viewport width margin on the right */
+    margin-top: 5vh;   /* Optional: Adds space above the table */
+    margin-bottom: 20px;/* Optional: Adds space below the table */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Bold text for Instructor */
+td:nth-child(3) {
+    font-weight: bold;
+}
+
+article{
+  margin-top: 13vh;
+}
+p{
+  font-weight: 500;
+}
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+    /* Adjusting the article margins and font size */
+    article {
+        margin-top: 45vh;
+        padding: 5px; /* Reduced padding for smaller screens */
+    }
+
+    article h1 {
+        font-size: 24px; /* Smaller font size for headings */
+    }
+
+    article p {
+        font-size: 16px; /* Smaller font size for paragraphs */
+        line-height: 1.4; /* Adjust line height for better readability */
+    }
+
+    /* Adjusting table styles for better visibility on small screens */
+    table {
+        width: 100%; /* Use full width of the viewport */
+        margin-left: 0;  /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+        font-size: 14px; /* Smaller font size for table content */
+    }
+
+    th, td {
+        padding: 6px; /* Reduced padding for table cells */
+    }
+
+    /* Ensure table headers and data are readable */
+    th {
+        font-size: 16px; /* Slightly larger font size for headers */
+    }
+}
+
+/* Optionally, further adjustments for even smaller screens like smartphones */
+@media screen and (max-width: 480px) {
+    article h1 {
+        font-size: 20px; /* Further reduced font size for very small screens */
+    }
+
+    article p {
+        font-size: 14px; /* Further reduced font size for paragraphs */
+    }
+
+    /* Further reduce table cell padding on very small screens */
+    th, td {
+        padding: 4px;
+    }
+  }
+    </style>
   </head>
   <body>
     <header class="navbar_top" role="banner">
@@ -14,7 +106,7 @@
               <a href="index.html" class="skip-link" role="menuitem">Home</a>
             </li>
             <li>
-              <a href="courses.html" role="menuitem" class="underline-hover">Courses</a>
+              <a href="courses.html" role="menuitem" class="underline-hover">First-term Courses</a>
             </li>
             <li>
               <a href="tutorials.html" role="menuitem" class="underline-hover">Tutorials</a>
@@ -27,6 +119,75 @@
             </li>
           </ul>
         </nav>
+    </header>
+    <article role="Welcoming words">
+      <h1>Welcome to University Of Windsor!</h1>
+      <p>
+        As you embark on this exciting journey, you're not just starting a new chapter in your academic life, but also stepping into a world brimming with opportunities for growth and success.
+        Here at Windsor, we are committed to nurturing your potential, encouraging you to dive deep into your studies and discover passions that resonate with your aspirations.
+      </p>
+      <p>
+        Our vibrant community is a melting pot of ideas and cultures, offering a rich environment for you to develop invaluable skills that extend beyond the classroom. We strongly believe in the power of networking and collaboration,
+         knowing that the connections you forge here will not only enhance your university experience but also pave the way for future successes. Embrace every challenge as an opportunity to learn and grow. Engage with your peers, professors,
+          and the community; these interactions will be the building blocks of your professional network and personal growth.
+      </p>
+      <p>
+        Remember, your time at the University of Windsor is not just about academic achievement but about shaping yourself into a well-rounded individual ready to make a positive impact in the world.
+         We are excited to see the remarkable things you will accomplish and are here to support you every step of the way. Welcome aboard, and may your journey at Windsor be filled with enriching experiences, lasting friendships, and unparalleled success! 🎓🌟🍁
+      </p>
+    </article>
+    <courses>
+      <table>
+        <thead>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Instructor</th>
+                <th>Schedule</th>
+                <th>Course Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>COMP-1000</td>
+                <td>Key Concepts in Computer Science</td>
+                <td><b>Dr. Dima Alhadidi</b></td>
+                <td>Monday 8:00 to 9:30<br>Thursday 13:00 to 14:30</td>
+                <td>Introduction to the fundamental concepts of computer science.</td>
+            </tr>
+            <tr>
+                <td>COMP-1047</td>
+                <td>Computer Concepts for End-Users</td>
+                <td><b>Prof. Johnson</b></td>
+                <td>Tuesday 9:00 to 10:30<br>Friday 14:00 to 15:30</td>
+                <td>Overview of computer concepts and applications for end-users.</td>
+            </tr>
+            <tr>
+                <td>COMP-1400</td>
+                <td>Intro to Programming and Algorithms I</td>
+                <td><b>Dr. Pooya Moradian Zadeh</b></td>
+                <td>Wednesday 10:00 to 11:30<br>Friday 16:00 to 17:30</td>
+                <td>The main objectives of the course are to develop the ability to identify, understand and design solutions to a wide variety of problems.</td>
+            </tr>
+            <tr>
+                <td>MATH-1250</td>
+                <td>Linear Algebra I</td>
+                <td><b>Zhiguo Hu, Ph.D. </b></td>
+                <td>Monday 11:00 to 12:30<br>Thursday 15:00 to 16:30</td>
+                <td>Continuation of programming and algorithms, focusing on advanced concepts.</td>
+            </tr>
+            <tr>
+                <td>MATH-1720</td>
+                <td>Intro to the Internet</td>
+                <td><b>Dr. Abdul A. Hussein</b></td>
+                <td>Tuesday 12:00 to 13:30<br>Friday 18:00 to 19:30</td>
+                <td>Introduction to Internet technologies and their applications.</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+    </courses>
   </body>
 
 </html>
