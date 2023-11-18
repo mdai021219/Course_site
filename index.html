@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Courses</title>
-    <link rel="stylesheet" type="text/css" href="./websiteResources/styles.css">
+    <link rel="stylesheet" type="text/css" href="./websiteResources/style.css">
     <style>
         .flex-container {
             display: flex;
@@ -42,21 +42,40 @@
 
         .news-content ol { margin-left: 40px; }
 
-        /* Responsive design for mobile devices */
-        @media (max-width: 768px) {
-            .flex-container {
-                flex-direction: column;
-                align-items: center;
-            }
+      /* Responsive design for mobile devices */
+      @media (max-width: 768px) {
+          .flex-container {
+              flex-direction: column;
+              align-items: center;
+          }
 
-            .news-content, .image-area {
-                max-width: 100%;
-            }
+          .news-content, .image-area {
+              max-width: 100%;
+          }
 
-            .news-content {
-                margin-top: 0; /* Adjust as needed */
-            }
-        }
+          .news-content {
+            margin-top: 25vh;
+              padding: 5px; /* Reduced padding for smaller screens */
+          }
+
+          /* Adjusting font sizes for better readability on small screens */
+          .news-content h1 { font-size: 28px; }
+          .news-content h2 { font-size: 24px; }
+          .news-content h3 { font-size: 20px; }
+
+          /* Ensuring the text and list items are not too wide */
+          .news-content p, .news-content ol {
+              max-width: 90%; /* Adjusts the width for better readability */
+              margin: auto; /* Centers the content */
+          }
+      }
+
+      /* Removing the image area on smaller screens */
+      @media (max-width: 768px) {
+          .image-area {
+              display: none; /* Hides the image area */
+          }
+      }
     </style>
   </head>
  
@@ -68,7 +87,7 @@
               <a href="index.html" class="skip-link" role="menuitem">Home</a>
             </li>
             <li>
-              <a href="courses.html" role="menuitem" class="underline-hover">Courses</a>
+              <a href="courses.html" role="menuitem" class="underline-hover">First-term Courses</a>
             </li>
             <li>
               <a href="tutorials.html" role="menuitem" class="underline-hover">Tutorials</a>
@@ -83,12 +102,12 @@
         </nav>
     </header>
         <div class="flex-container">
-            <div class="image-area">
+            <div class="image-area" role="professor teching image">
                 <img src="cs.jpg" alt="teaching" width="900px" height="600px">
-                <!-- The image will be set via CSS -->
+                <!-- The image is from the uwindsor official website -->
             </div>
-                
-                <div class="news-content">
+                <!-- The following news is from uwindsor official website-->
+                <div role="news" class="news-content">
                     <h1 style="text-align: center;">School of Computer Science</h1>
                     <h3 style="text-align: center;">Latest News</h3>
                     <h2>Technical Workshop Series: Advanced SQL Server Techniques</h2>
@@ -97,7 +116,7 @@
                     <p>Location: 4th Floor (Workshop space) at 300 Ouellette Avenue (School of Computer Science Advanced Computing Hub)</p>
                     <p>LATECOMERS WILL NOT BE ADMITTED once the presentation has begun.</p>
                     <h3>Abstract:</h3>
-                    <p>This workshop explores Advanced SQL Server techniques within real-world analytics scenarios...</p>
+                    <p>This workshop explores Advanced SQL Server techniques within real-world analytics scenarios</p>
                     <h3>Workshop Outline:</h3>
                     <ol>
                         <li>Introduction to SQL SERVER</li>
@@ -108,7 +127,7 @@
                     <h3>Prerequisites:</h3>
                     <p>Knowledge of SQL Fundamentals</p>
                     <h3>Biography:</h3>
-                    <p>Atefeh is a second-year Ph.D. student specializing in deep learning-based anomaly detection...</p>
+                    <p>Atefeh is a second-year Ph.D. student specializing in deep learning-based anomaly detection</p>
                 </div>
         </div>
         
